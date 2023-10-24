@@ -22,10 +22,12 @@ la structure du projet et comme suite :
 ## <u>**Captures d'écrans**</u>
 - **Ajoute d'une machine :**
 
-![screen2](https://github.com/ayouboifikEnsaj/Tp_Servelet/assets/107751911/cc49763b-100e-4a0b-88b9-45f2c5d476b7)
+![image](https://github.com/ayouboifikEnsaj/Tp_JSP/assets/107751911/41e4fb6c-ad04-4916-8680-1a00eb996e8d)
 
 
-![screen3](https://github.com/ayouboifikEnsaj/Tp_Servelet/assets/107751911/243878a3-5431-4c06-92c7-c223569400d4)
+
+![image](https://github.com/ayouboifikEnsaj/Tp_JSP/assets/107751911/6dc2fe44-123a-4557-944f-5964612a51dd)
+
 
 
 - **Suppression d'une machine :**
