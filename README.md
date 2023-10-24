@@ -12,5 +12,15 @@
 
   ![screen 4](https://github.com/ayouboifikEnsaj/Tp_Servelet/assets/107751911/07059810-15c8-435c-913c-f3eb65e09cb9)
 
+
+## <u>**Les Technologies Utilisées**</u>
++ Java 
++ MySQL
++ Hibernate 
+
+## <u>**les fonctionnalités implémentées**</u>
+1. les operations CRUD pour les machines
+2. les operation CRUD pour les salles
+3. trouver les machines existants
   
   
