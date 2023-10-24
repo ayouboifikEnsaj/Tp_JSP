@@ -16,7 +16,8 @@
 ## <u>**Les Technologies Utilisées**</u>
 + Java 
 + MySQL
-+ Hibernate 
++ Hibernate
++ JSP
 
 ## <u>**les fonctionnalités implémentées**</u>
 1. les operations CRUD pour les machines
