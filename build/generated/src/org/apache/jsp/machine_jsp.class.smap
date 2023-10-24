@@ -1,0 +1,16 @@
+SMAP
+machine_jsp.java
+JSP
+*S JSP
+*F
++ 0 machine.jsp
+machine.jsp
+*L
+5,57:46
+63,5:105
+67,2:110
+69,6:112,3
+75:130
+76:131,3
+77,13:134
+*E
