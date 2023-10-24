@@ -30,10 +30,6 @@ la structure du projet et comme suite :
 
 
 
-- **Suppression d'une machine :**
-
-
-  ![screen 4](https://github.com/ayouboifikEnsaj/Tp_Servelet/assets/107751911/07059810-15c8-435c-913c-f3eb65e09cb9)
 
 
 
