@@ -24,6 +24,10 @@ la structure du projet et comme suite :
 ![image](https://github.com/ayouboifikEnsaj/Tp_JSP/assets/107751911/3ceaf4b4-23c9-4c0d-9e58-48d7d4449a14)
 
 
+- **Ajoute d'une salle :**
+
+![image](https://github.com/ayouboifikEnsaj/Tp_JSP/assets/107751911/3194b7c9-56fb-4521-a583-8bd856d7e4d7)
+
 
 
 
