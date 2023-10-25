@@ -14,19 +14,15 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-import services.MachineService;
 import services.SalleService;
 
 /**
  *
  * @author PC
  */
-@WebServlet(name = "MachineController", urlPatterns = "/MachineController")
-public class machinecontroller extends HttpServlet {
-
-    MachineService ms = new MachineService();
+@WebServlet(name = "SalleController", urlPatterns = "/SalleController")
+public class sallecontroller extends HttpServlet {
     SalleService ss = new SalleService();
-    
     /**
      * Processes requests for both HTTP <code>GET</code> and <code>POST</code>
      * methods.
@@ -37,11 +33,11 @@ public class machinecontroller extends HttpServlet {
      * @throws IOException if an I/O error occurs
      */
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
-            throws ServletException, IOException {
+           throws ServletException, IOException {
         if(request.getParameter("operation") != null){
             if(request.getParameter("operation").equals("delete")){
                 int id = Integer.parseInt(request.getParameter("id"));
-                ms.delete(ms.findById(id));
+                ss.delete(ss.findById(id));
             }
               
             if(request.getParameter("operation").equals("update")){
@@ -50,11 +46,9 @@ public class machinecontroller extends HttpServlet {
               
             }
         }else{
-              String ref =  request.getParameter("ref");
-       String marque =  request.getParameter("marque");
-       Double prix = Double.parseDouble(request.getParameter("prix"));
-       int salleId = Integer.parseInt(request.getParameter("salle"));
-       ms.create(new Machine(ref, marque, prix,ss.findById(salleId)));
+              String code =  request.getParameter("salle");
+     
+       ss.create(new Salle(code));
              
         }
         response.sendRedirect("machine.jsp");

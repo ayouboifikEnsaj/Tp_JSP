@@ -1,14 +1,12 @@
-package org.apache.jsp;
+package org.apache.jsp.css;
 
 import javax.servlet.*;
 import javax.servlet.http.*;
 import javax.servlet.jsp.*;
 import entities.Salle;
 import services.SalleService;
-import entities.Machine;
-import services.MachineService;
 
-public final class machine_jsp extends org.apache.jasper.runtime.HttpJspBase
+public final class salle_jsp extends org.apache.jasper.runtime.HttpJspBase
     implements org.apache.jasper.runtime.JspSourceDependent {
 
   private static final JspFactory _jspxFactory = JspFactory.getDefaultFactory();
@@ -45,8 +43,6 @@ public final class machine_jsp extends org.apache.jasper.runtime.HttpJspBase
       _jspx_out = out;
       _jspx_resourceInjector = (org.glassfish.jsp.api.ResourceInjector) application.getAttribute("com.sun.appserv.jsp.resource.injector");
 
-      out.write("\n");
-      out.write("\n");
       out.write("\n");
       out.write("\n");
       out.write("\n");
@@ -112,53 +108,22 @@ public final class machine_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("            </div>\n");
       out.write("        </div>\n");
       out.write("        <div class=\"container\">\n");
-      out.write("            <form action=\"MachineController\" method=\"GET\">\n");
+      out.write("            <form action=\"SalleController\" method=\"GET\">\n");
       out.write("                <fieldset>\n");
-      out.write("                    <legend class=\"center-align\" >Informations machine</legend>\n");
+      out.write("                    <legend class=\"center-align\" >Informations sur la salle</legend>\n");
       out.write("                    <div class=\"row justify-content-center\">\n");
       out.write("                        <div class=\"col-md-6\">\n");
-      out.write("                            <div class=\"form-group row mb-3\">\n");
-      out.write("                                <label for=\"ref\" class=\"col-sm-2 col-form-label\">Référence:</label>\n");
-      out.write("                                <div class=\"col-sm-10\">\n");
-      out.write("                                    <input type=\"text\" class=\"form-control\" name=\"ref\" id=\"ref\" value=\"\">\n");
-      out.write("                                </div>\n");
-      out.write("                            </div>\n");
-      out.write("                            <div class=\"form-group row mb-3\">\n");
-      out.write("                                <label for=\"marque\" class=\"col-sm-2 col-form-label\">Marque:</label>\n");
-      out.write("                                <div class=\"col-sm-10\">\n");
-      out.write("                                    <input type=\"text\" class=\"form-control\" name=\"marque\" id=\"marque\" value=\"\">\n");
-      out.write("                                </div>\n");
-      out.write("                            </div>\n");
-      out.write("                            <div class=\"form-group row mb-3\">\n");
-      out.write("                                <label for=\"prix\" class=\"col-sm-2 col-form-label\">Prix :</label>\n");
-      out.write("                                <div class=\"col-sm-10\">\n");
-      out.write("                                    <input type=\"text\" class=\"form-control\" name=\"prix\" id=\"prix\" value=\"\">\n");
-      out.write("                                </div>\n");
-      out.write("                            </div>\n");
-      out.write("                            <div class=\"form-group row mb-3\">\n");
-      out.write("                           \n");
-      out.write("                                <label for=\"salle\" class=\"col-sm-2 col-form-label\" style=\"font-size:15px\">Salle :</label>\n");
-      out.write("                                <select class=\"form-control\" name=\"salle\" style=\"font-size:15px\">\n");
-      out.write("                                    ");
-
-                                        SalleService sc = new SalleService();
-                                        for (Salle s : sc.findAll()) {
-                                    
       out.write("\n");
-      out.write("                                    <option style=\"font-size:15px\" value=\"");
-      out.print( s.getId());
-      out.write('"');
-      out.write('>');
-      out.print( s.getCode());
-      out.write("</option>\n");
-      out.write("                                    ");
- } 
       out.write("\n");
-      out.write("                                </select>\n");
+      out.write("                            <div class=\"form-group row mb-3\">\n");
+      out.write("                                <label for=\"salle\" class=\"col-sm-2 col-form-label\">Salle code :</label>\n");
+      out.write("                                <div class=\"col-sm-10\">\n");
+      out.write("                                    <input type=\"text\" class=\"form-control\" name=\"salle\" value=\"\">\n");
+      out.write("                                </div>\n");
       out.write("                            </div>\n");
       out.write("                            <div class=\"form-group form-inline justify-content-center text-center\">\n");
       out.write("                                <input type=\"submit\" class=\"btn btn-primary mr-2\" value=\"Ajouter\" />\n");
-      out.write("                                <input type=\"submit\" class=\"btn btn-secondary\" value=\"Annuler\" />\n");
+      out.write("\n");
       out.write("                            </div>\n");
       out.write("                        </div>\n");
       out.write("                    </div>\n");
@@ -169,15 +134,13 @@ public final class machine_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("\n");
       out.write("\n");
       out.write("            <fieldset>\n");
-      out.write("                <legend class=\"center-align\">Liste des machines</legend>\n");
+      out.write("                <legend class=\"center-align\">Liste des salles</legend>\n");
       out.write("                <table class=\"table table-striped\">\n");
       out.write("                    <thead>\n");
       out.write("                        <tr>\n");
       out.write("                            <th>ID</th>\n");
-      out.write("                            <th>Référence</th>\n");
-      out.write("                            <th>Marque</th>\n");
-      out.write("                            <th>Prix</th>\n");
-      out.write("                            <th>salle</th>\n");
+      out.write("                            <th>code salle</th>\n");
+      out.write("\n");
       out.write("                            <th>Modifier</th>\n");
       out.write("                            <th>Supprimer</th>\n");
       out.write("                        </tr>\n");
@@ -185,31 +148,23 @@ public final class machine_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("                    <tbody>\n");
       out.write("                        ");
 
-                            MachineService ms = new MachineService();
-                            for (Machine m : ms.findAll()) {
+                            SalleService ss = new SalleService();
+                            for (Salle s : ss.findAll()) {
                         
       out.write("      \n");
       out.write("                        <tr>\n");
       out.write("                            <td>");
-      out.print(m.getId());
+      out.print(s.getId());
       out.write("</td>\n");
       out.write("                            <td>");
-      out.print(m.getRef());
+      out.print(s.getCode());
       out.write("</td>\n");
-      out.write("                            <td>");
-      out.print(m.getMarque());
-      out.write("</td>\n");
-      out.write("                            <td>");
-      out.print(m.getPrix());
-      out.write("</td>\n");
-      out.write("                            <td>");
-      out.print(m.getSalle().getCode());
-      out.write("</td>\n");
-      out.write("                            <td><a href=\"MachineController?operation=update&id=");
-      out.print( m.getId());
+      out.write("\n");
+      out.write("                            <td><a href=\"SalleController?operation=update&id=");
+      out.print( s.getId());
       out.write("\" class=\"btn btn-primary\" data-toggle=\"modal\">Modifier</a></td>\n");
       out.write("                            <td><button type=\"button\" class=\"btn btn-primary bg-blue-500 text-white\" class=\"btn btn-danger\" data-toggle=\"modal\" data-target=\"#confirmDeleteModal\" data-id=\"");
-      out.print(m.getId());
+      out.print(s.getId());
       out.write("\">Supprimer</button></td>\n");
       out.write("                        </tr>\n");
       out.write("                        ");
@@ -227,7 +182,7 @@ public final class machine_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("\n");
       out.write("// Configurer le bouton \"Confirmer la suppression\" dans la modal pour rediriger vers la suppression réelle\n");
       out.write("                $('#confirmDeleteBtn').on('click', function () {\n");
-      out.write("                    window.location.href = \"MachineController?operation=delete&id=\" + productId;\n");
+      out.write("                    window.location.href = \"SalleController?operation=delete&id=\" + productId;\n");
       out.write("                });\n");
       out.write("            });\n");
       out.write("        </script>\n");

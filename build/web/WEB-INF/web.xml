@@ -4,9 +4,17 @@
         <servlet-name>machinecontroller</servlet-name>
         <servlet-class>controller.machinecontroller</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>sallecontroller</servlet-name>
+        <servlet-class>controller.sallecontroller</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>machinecontroller</servlet-name>
         <url-pattern>/machinecontroller</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>sallecontroller</servlet-name>
+        <url-pattern>/sallecontroller</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>
