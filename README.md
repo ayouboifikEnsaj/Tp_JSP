@@ -21,12 +21,8 @@ la structure du projet et comme suite :
   
 ## <u>**Captures d'écrans**</u>
 - **Ajoute d'une machine :**
+![image](https://github.com/ayouboifikEnsaj/Tp_JSP/assets/107751911/ade7a3ad-ca4e-4831-9ccf-232adf0889a8)
 
-![image](https://github.com/ayouboifikEnsaj/Tp_JSP/assets/107751911/41e4fb6c-ad04-4916-8680-1a00eb996e8d)
-
-
-
-![image](https://github.com/ayouboifikEnsaj/Tp_JSP/assets/107751911/6dc2fe44-123a-4557-944f-5964612a51dd)
 
 
 
